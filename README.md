@@ -18,6 +18,8 @@ pip3 install scikit-learn torch torchvision numpy
 
 ## Data Folder (if your dataset doesn't have 'train' and 'val' folder separate):
 make sure your download dataset with this structure, for example, Caltech101 where the dataset is saved on folder data/
+
+```bash
 data/
     caltech101/
         101_ObjectCategories/
@@ -28,3 +30,4 @@ data/
                 image_0001.jpg
                 ...
             ...
+```
