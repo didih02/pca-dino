@@ -14,5 +14,4 @@ pip3 install scikit-learn torch torchvision numpy
 
 ### Source:
 https://github.com/facebookresearch/dino
-
 https://github.com/ShirAmir/dino-vit-features
