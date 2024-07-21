@@ -1,4 +1,5 @@
-# PCA-DINO
+
+# PCA-DIno
 
 ## Overview
 PCA-DINO is a project that leverages Principal Component Analysis (PCA) and Dino-ViT.
@@ -11,7 +12,7 @@ Before you use our code, please install the required libraries if you haven't al
 pip3 install scikit-learn torch torchvision numpy
 ```
 
-
 ### Source:
-https://github.com/facebookresearch/dino
-https://github.com/ShirAmir/dino-vit-features
+1. https://github.com/facebookresearch/dino
+2. https://github.com/ShirAmir/dino-vit-features
+
