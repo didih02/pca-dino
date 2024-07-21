@@ -12,7 +12,19 @@ Before you use our code, please install the required libraries if you haven't al
 pip3 install scikit-learn torch torchvision numpy
 ```
 
-### Source:
+## Source:
 1. https://github.com/facebookresearch/dino
 2. https://github.com/ShirAmir/dino-vit-features
 
+## Data Folder (if your dataset doesn't have 'train' and 'val' folder separate):
+make sure your download dataset with this structure, for example, Caltech101 where the dataset is saved on folder data/
+data/
+    caltech101/
+        101_ObjectCategories/
+            accordion/
+                image_0001.jpg
+                ...
+            airplane/
+                image_0001.jpg
+                ...
+            ...
