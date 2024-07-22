@@ -26,6 +26,8 @@ data/
                 ...
             ...
 ```
+## Using split_dataset.py 
+
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
