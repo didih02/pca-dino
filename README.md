@@ -35,6 +35,7 @@ This script is used to split your dataset into training and validation sets. Bel
 python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8
 ```
 Instructions:
+
 **1. Prepare Your Dataset:**
 * Ensure your dataset is stored in the correct folder structure.
 * In the example above, the dataset is stored in data/caltech101.
