@@ -34,28 +34,22 @@ This script is used to split your dataset into training and validation sets. Bel
 ```bash
 python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8
 ```
-Instructions
-Prepare Your Dataset:
-
+Instructions:
+1. Prepare Your Dataset:
 Ensure your dataset is stored in the correct folder structure. In the example above, the dataset is stored in data/caltech101.
-Run the Script:
 
+2. Run the Script:
 Use the command shown above to run the script. Replace the paths and ratio as needed:
 --data_dir: The directory where your dataset is stored.
 --output_dir: The directory where you want the split dataset to be saved.
 --train_ratio: The ratio of the dataset to be used for training. In the example above, 0.8 means 80% for training and 20% for validation.
 
-```bash python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8 ```
-
-In this example:
-
-The dataset is located in data/caltech101.
-The split datasets will be saved in images/caltech101.
-80% of the data will be used for training, and 20% will be used for validation.
-Notes
-Ensure that the directory structure is correctly set up before running the script.
-You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
-By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
+Notes:
+1. In this example, The dataset is located in data/caltech101.
+2. The split datasets will be saved in images/caltech101.
+3. Ensure that the directory structure is correctly set up before running the script.
+4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
+5. By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
