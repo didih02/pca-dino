@@ -64,10 +64,15 @@ python3 dino.py --data_path images/caltech101/ --save_features output/caltech101
 * pre-trained weights: defaults set from previous research
 * number workers: 10
 
-2. Then your Dino-ViT features will be saved on folder output/caltec101 using the argument **--save_features**.
+2. Then your Dino-ViT features will be saved on folder **output/caltech101** using the argument **--save_features**.
 3. Some architectures can be choosen: vit_small (default), vit_base, and resnet50. Refer to this [link](https://github.com/facebookresearch/dino) for details 
 4. Patch size you can choose: 8, 16 and 32
 5. Pre-trained weight you can download from this [link](https://github.com/facebookresearch/dino)
+
+Example for details:
+```
+python3 dino.py --data_path images/caltech101/ --save_features output/caltech101 --arch vit_base --patch_size 16 --pretrained_weights weights/caltech101
+```
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
