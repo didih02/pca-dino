@@ -27,9 +27,9 @@ data/
             ...
 ```
 
-## split_dataset.py
+## Split dataset
 
-This script is used to split your dataset into training and validation sets. Below is an example of how to use this script:
+This script is used to split your dataset into training and validation sets. Below is an example of how to use this script using split_dataset.py:
 
 ```
 python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8
@@ -52,6 +52,19 @@ Use the command shown above to run the script. Replace the paths and ratio as ne
 3. Ensure that the directory structure is correctly set up before running the script.
 4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
 5. By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
+
+## Extract Features
+To extract the feature of Dino-ViT, you can use the dino.py file. Below is an example of how to use this script:
+```
+python3 dino.py --data_path images/caltech101/ --save_features output/caltech101
+```
+1. Using this script, your configuration setting of Dino-ViT will be default:
+* Architecture: vit-small
+* patch size: 16
+* pre-trained weights: defaults set from previous research
+* number workers: 10
+
+2, Then your Dino-ViT features will be saved on folder output/caltec101 using the argument **--save_features**.
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
