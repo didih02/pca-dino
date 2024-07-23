@@ -54,25 +54,26 @@ Use the command shown above to run the script. Replace the paths and ratio as ne
 5. By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
 
 ## Extract Features
-To extract the feature of Dino-ViT, you can use the dino.py file. Below is an example of how to use this script:
+To extract features using Dino-ViT, you can utilize the dino.py script. Below is an example of how to use this script:
 ```
 python3 dino.py --data_path images/caltech101/ --save_features output/caltech101
 ```
-1. Using this script, your configuration setting of Dino-ViT will be default:
+### Default Configuration
+When using this script, the default configuration settings for Dino-ViT are as follows:
 * Architecture: vit-small
 * patch size: 16
 * pre-trained weights: defaults set from previous research
 * number workers: 10
 
-2. Then your Dino-ViT features will be saved on folder **output/caltech101** using the argument **--save_features**.
-3. Some architectures can be choosen: vit_small (default), vit_base, and resnet50. Refer to this [link](https://github.com/facebookresearch/dino) for details 
-4. Patch size you can choose: 8, 16 and 32
-5. Pre-trained weight you can download from this [link](https://github.com/facebookresearch/dino)
+### Saving Features
+The extracted Dino-ViT features will be saved in the folder specified by the **--save_features argument**. In the example above, the features will be saved in **output/caltech101**.
 
-Example for details:
-```
-python3 dino.py --data_path images/caltech101/ --save_features output/caltech101 --arch vit_base --patch_size 16 --pretrained_weights weights/caltech101
-```
+### Customizing the Configuration
+1. Architectures: You can choose from the following architectures: vit_small (default), vit_base, and resnet50. Refer to the [Dino Github Repository](https://github.com/facebookresearch/dino) for more details 
+2. Patch Sizes: Available patch sizes are: 8, 16, and 32
+3. Pre-trained Weights: Pre-trained weights can be downloaded from this [link](https://github.com/facebookresearch/dino)
+
+By customizing these options, you can adjust the feature extraction process to better suit your specific needs.
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
