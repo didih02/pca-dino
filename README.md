@@ -75,6 +75,23 @@ The extracted Dino-ViT features will be saved in the folder specified by the **-
 
 By customizing these options, you can adjust the feature extraction process to better suit your specific needs.
 
+## PCA-Dino Classifier
+This program allows you to use our classifier on PCA-Dino features. In this research, we use KNN and SVM classifiers. The configuration settings for the classifier can be found in the pca_dino.py code. Below are examples of how to use this script:
+
+### without PCA
+```
+python3 pca_dino.py --dataset caltech101 --load_features output/
+```
+### with PCA
+```
+python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized
+```
+#### Instructions
+1. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
+2. Using PCA: If using PCA, you can adjust the n_component and svd_solver parameters as needed.
+3. Results: The classification results will be saved in the classify_dino folder and the classify_pca_dino folder, which are automatically created when you run the code.
+   
+By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
 2. https://github.com/ShirAmir/dino-vit-features
