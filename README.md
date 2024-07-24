@@ -91,6 +91,14 @@ python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True 
    
 By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
 
+## Kernel-PCA and Grid Search
+This repository contains code that supports our research on kernel PCA and grid search. You can utilize this code to replicate our experiments or conduct your own. Detailed instructions are provided within the code.
+
+### How to Use
+The code for kernel PCA and grid search can be found in this repository.
+* Follow the instructions in the code to understand how to configure and run the experiments.
+* By using this code, you can explore the effectiveness of kernel PCA and grid search in your research. For any questions or further information, please refer to the comments and documentation provided in the code files.
+
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
 2. https://github.com/ShirAmir/dino-vit-features
