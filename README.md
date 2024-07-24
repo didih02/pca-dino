@@ -87,7 +87,7 @@ python3 pca_dino.py --dataset caltech101 --load_features output/
 python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized
 ```
 
-#### Instructions
+### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
 2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved.
 3. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
