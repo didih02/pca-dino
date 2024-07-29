@@ -240,7 +240,7 @@ if __name__ == "__main__":
     parser.add_argument("--float16", default=False, type=utils.bool_flag, help="""help to using floating point 16 on your results, 
                         basic extract features from Dino-ViT is floating point 32""")
     args = parser.parse_args()
-    main(args.dataset, args.act_pca, args.n_component, args.load_features, args.svd_solver, args.float16)
+    main(args.dataset, args.act_pca, args.n_component, args.load_features, args.float16)
 
        #Example:
     #python3 kernel_pca_dino.py --dataset cifar10 --load_features output/ ==> without PCA
