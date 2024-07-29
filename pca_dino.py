@@ -79,7 +79,7 @@ def knn_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size
 def svm_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size, act_pca, n_component, svd_solver):
     
     # Train SVM model
-    clf = svm.SVC(kernel="linear", verbose=False) #default setting
+    clf = svm.SVC(kernel="linear", verbose=False) #default setting, we use it on this research.
 
     #best configuration
     # clf = svm.SVC(kernel="rbf", verbose=False, C=10, gamma="scale", tol=0.001) #first best setting for cifar10 and eurosat
