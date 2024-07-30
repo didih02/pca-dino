@@ -78,12 +78,15 @@ def knn_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size
 
 def svm_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size, act_pca, n_component):
     
-    #best configuration
-    # clf = svm.SVC(kernel="rbf", verbose=False, C=10, gamma="scale", tol=0.001) #first best setting
-    # clf = svm.SVC(kernel="rbf", verbose=False, C=0.01, gamma="scale", tol=0.001)
-    
     # Train SVM model
-    clf = svm.SVC(kernel="linear", verbose=False) #defaults setting
+    clf = svm.SVC(kernel="linear", verbose=False) #default setting
+
+    #best configuration
+    # clf = svm.SVC(kernel="rbf", verbose=False, C=10, gamma="scale", tol=0.001) #first best setting for cifar10 and eurosat
+    # clf = svm.SVC(kernel="linear", verbose=False, C=0.01, gamma="scale", tol=0.001) #second best setting for caltech101
+    # clf = svm.SVC(kernel="rbf", verbose=False, C=10, gamma="auto", tol=0.001) #third best setting for cifar100
+    # clf = svm.SVC(kernel="linear", verbose=False, C=100, gamma="scale", tol=0.001) #fourth best setting for caltech256
+
     clf.fit(X_train, y_train.ravel())
 
     # Save the model
