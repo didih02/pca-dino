@@ -81,6 +81,7 @@ This program allows you to use our classifier on PCA-Dino features. In this rese
 ```
 python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True
 ```
+**If you want to use k-fold cross-validation, you can use the file pca_dino_.py, with similar arguments.**
 
 ### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
@@ -94,7 +95,7 @@ python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True 
 By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
 
 ## Kernel-PCA and Grid Search
-This repository contains code that supports our research on kernel PCA and grid search. You can utilize this code to replicate our experiments or conduct your own. Detailed instructions are provided within the code.
+This repository contains code that supports our research on kernel PCA and grid search. You can utilize this code to replicate our experiments or conduct your own. Detailed instructions are provided within the code. **If you want to use k-fold cross-validation on kernel PCA, you can use kernel_pca_.py**
 
 ### How to Use
 The code for kernel PCA and grid search can be found in this repository.
