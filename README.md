@@ -85,7 +85,7 @@ python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True 
 
 ### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
-2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved.
+2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved. It will search the folder with the name based on your dataset folder name.
 3. --svd_solver: Set your svd_solver on PCA, default is **auto**
 4. --float16: Use floating point 16 on your results, basic extract features from Dino-ViT is floating point 32. Default set **False** which means still using Float32
 5. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
