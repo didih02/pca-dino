@@ -81,7 +81,7 @@ This program allows you to use our classifier on PCA-Dino features. In this rese
 ```
 python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True
 ```
-**If you want to use k-fold cross-validation, you can use the file pca_dino_.py, with similar arguments.**
+**If you want to use k-fold cross-validation, you can use the pca_dino_.py file with similar arguments. However, if you have limited resources, you can choose a regular validation with an 80% training and 20% testing split (pca_dino.py), as the results from k-fold cross-validation are often comparable.**
 
 ### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
