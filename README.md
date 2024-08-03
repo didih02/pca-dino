@@ -102,6 +102,9 @@ The code for kernel PCA and grid search can be found in this repository.
 * Follow the instructions in the code to understand how to configure and run the experiments.
 * By using this code, you can explore the effectiveness of kernel PCA and grid search in your research. For any questions or further information, please refer to the comments and documentation provided in the code files.
 
+## Results of Research 
+This link can access the result.....
+
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
 2. https://github.com/ShirAmir/dino-vit-features
