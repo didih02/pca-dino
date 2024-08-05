@@ -90,7 +90,7 @@ python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True 
 4. --float16: Use floating point 16 on your results, basic extract features from Dino-ViT is floating point 32. Default set **False** which means still using Float32
 5. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
 6. You can adjust the n_component and svd_solver parameters as needed.
-7. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the size of the entire dataset after reduction, the sixth column is the number of components, and the last column indicates the timestamp of the run.**
+7. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
    
 By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
 
@@ -105,7 +105,7 @@ The code for kernel PCA and grid search can be found in this repository.
 ## Results of Research 
 This link can access the result: 
 https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/EpgfR7h6Eb1Bi_bBF-IOwyQBH9pBT80AojePTwrsoaCV3Q?e=OZO96k. 
-If you find CSV file, **<mark> the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the size of the entire dataset after reduction, the sixth column is the number of components, and the last column indicates the timestamp of the run.**
+If you find CSV file, **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
