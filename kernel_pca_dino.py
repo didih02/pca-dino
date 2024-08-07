@@ -18,22 +18,27 @@ def get_file_size_in_kb(file_path):
     file_size_kb = file_size_bytes / 1024  # Convert bytes to kilobytes
     return file_size_kb
 
-def calculate_topk_accuracy(output, target, topk=(1, 5)):
+def calculate_topk_accuracy(classifier, output, target, topk=(1, 5)):
     # https://gist.github.com/weiaicunzai/2a5ae6eac6712c70bde0630f3e76b77b
     """Computes the accuracy over the k top predictions for the specified values of k"""
     with torch.no_grad():
-        
-        maxk = max(topk)
-        batch_size = target.size(0)
+        res = []        
+        check_class = torch.unique(target).size(0)
 
-        _, pred = output.topk(maxk, 1, True, True)
-        pred = pred.t()
-        correct = pred.eq(target.view(1, -1).expand_as(pred))
+        if check_class > 2:
+            maxk = max(topk)
+            batch_size = target.size(0)
 
-        res = []
-        for k in topk:
-            correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
-            res.append(correct_k.mul_(100.0 / batch_size))
+            _, pred = output.topk(maxk, 1, True, True)
+            pred = pred.t()
+            correct = pred.eq(target.view(1, -1).expand_as(pred))
+
+            for k in topk:
+                correct_k = correct[:k].reshape(-1).float().sum(0, keepdim=True)
+                res.append(correct_k.mul_(100.0 / batch_size))
+        else:
+            print(f"Only two classes, not need top1 and top5 accuracy using {classifier}")
+            res = torch.tensor([[0],[0]], dtype=torch.float)
         return res
 
 def knn_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size, act_pca, n_component):
@@ -57,7 +62,7 @@ def knn_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size
     y_test_tensor = torch.tensor(LabelEncoder().fit_transform(y_test))
     y_pred_prob_tensor = torch.tensor(y_pred_prob)
    
-    top1_acc, top5_acc = calculate_topk_accuracy(y_pred_prob_tensor, y_test_tensor)
+    top1_acc, top5_acc = calculate_topk_accuracy("KNN", y_pred_prob_tensor, y_test_tensor)
 
     # Save classification report
     with open(os.path.join(dino_dir, "classification_report_knn.txt"), 'a') as fd:
@@ -86,7 +91,6 @@ def svm_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size
     # clf = svm.SVC(kernel="linear", verbose=False, C=0.01, gamma="scale", tol=0.001) #second best setting for caltech101
     # clf = svm.SVC(kernel="rbf", verbose=False, C=10, gamma="auto", tol=0.001) #third best setting for cifar100
     # clf = svm.SVC(kernel="linear", verbose=False, C=100, gamma="scale", tol=0.001) #fourth best setting for caltech256
-
     clf.fit(X_train, y_train.ravel())
 
     # Save the model
@@ -103,7 +107,7 @@ def svm_classify(name_dataset, X_train, y_train, X_test, y_test, dino_dir, _size
     y_test_tensor = torch.tensor(LabelEncoder().fit_transform(y_test))
     y_pred_prob_tensor = torch.tensor(y_pred_prob)
 
-    top1_acc, top5_acc = calculate_topk_accuracy(y_pred_prob_tensor, y_test_tensor)
+    top1_acc, top5_acc = calculate_topk_accuracy("SVM", y_pred_prob_tensor, y_test_tensor)
 
     # Save classification report
     with open(os.path.join(dino_dir, "classification_report_svm.txt"), 'a') as fd:
@@ -247,7 +251,7 @@ if __name__ == "__main__":
 
        #Example:
     #python3 kernel_pca_dino.py --dataset cifar10 --load_features output/ ==> without PCA
-    #python3 kernel_pca_dino.py --dataset cifar10 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True==> with PCA
+    #python3 kernel_pca_dino.py --dataset cifar_10 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True==> with PCA
 
 
     # note for SVM_classifier #https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
