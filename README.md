@@ -81,16 +81,16 @@ This program allows you to use our classifier on PCA-Dino features. In this rese
 ```
 python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True
 ```
-**If you want to use k-fold cross-validation, you can use the file pca_dino_.py, with similar arguments.**
+**If you want to use k-fold cross-validation, you can use the pca_dino_.py file with similar arguments. However, if you have limited resources, you can choose a regular validation with an 80% training and 20% testing split (pca_dino.py), as the results from k-fold cross-validation are often comparable.**
 
 ### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
-2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved.
+2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved. It will search the folder with the name based on your dataset folder name.
 3. --svd_solver: Set your svd_solver on PCA, default is **auto**
 4. --float16: Use floating point 16 on your results, basic extract features from Dino-ViT is floating point 32. Default set **False** which means still using Float32
 5. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
 6. You can adjust the n_component and svd_solver parameters as needed.
-7. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the size of the entire dataset after reduction, the sixth column is the number of components, and the last column indicates the timestamp of the run.
+7. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
    
 By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
 
@@ -101,6 +101,11 @@ This repository contains code that supports our research on kernel PCA and grid 
 The code for kernel PCA and grid search can be found in this repository.
 * Follow the instructions in the code to understand how to configure and run the experiments.
 * By using this code, you can explore the effectiveness of kernel PCA and grid search in your research. For any questions or further information, please refer to the comments and documentation provided in the code files.
+
+## Results of Research 
+This link can access the result: 
+https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/EpgfR7h6Eb1Bi_bBF-IOwyQBH9pBT80AojePTwrsoaCV3Q?e=OZO96k. 
+If you find CSV file, **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
