@@ -32,7 +32,7 @@ data/
 This script is used to split your dataset into training and validation sets. Below is an example of how to use this script using split_dataset.py:
 
 ```
-python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8
+python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8 --type_images png
 ```
 Instructions:
 
@@ -45,6 +45,7 @@ Use the command shown above to run the script. Replace the paths and ratio as ne
 * --data_dir: The directory where your dataset is stored.
 * --output_dir: The directory where you want the split dataset to be saved.
 * --train_ratio: The ratio of the dataset to be used for training. In the example above, 0.8 means 80% for training and 20% for validation.
+* --types_images: Set your type of images, example: png, jpeg, jpg.
 
 **Notes:**
 1. In this example, The dataset is located in data/caltech101.
