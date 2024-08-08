@@ -53,6 +53,7 @@ Use the command shown above to run the script. Replace the paths and ratio as ne
 3. Ensure that the directory structure is correctly set up before running the script.
 4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
 5. By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
+6. Using this script, your dataset will be preprocessed by our program.
 
 ## Extract Features
 To extract features using Dino-ViT, you can utilize the dino.py script. Below is an example of how to use this script:
