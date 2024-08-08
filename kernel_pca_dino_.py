@@ -309,8 +309,8 @@ if __name__ == "__main__":
     main(args.dataset, args.act_pca, args.n_component, args.load_features, args.float16)
 
        #Example:
-    #python3 kernel_pca_dino.py --dataset cifar10 --load_features output/ ==> without PCA
-    #python3 kernel_pca_dino.py --dataset cifar_10 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True==> with PCA
+    #python3 kernel_pca_dino_.py --dataset cifar10 --load_features output/ ==> without PCA
+    #python3 kernel_pca_dino_.py --dataset cifar_10 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True==> with PCA
 
 
     # note for SVM_classifier #https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
