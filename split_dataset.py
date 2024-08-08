@@ -68,4 +68,4 @@ split(args.data_dir, args.train_ratio, args.output_dir, args.type_images)
 #             ...
 
 #how to use this code, for example
-#python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8
+#python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8 --type_images png
