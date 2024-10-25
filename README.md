@@ -1,8 +1,8 @@
 
-# PCA-Dino
+# PCA-Dino & NCA-Dino
 
 ## Overview
-PCA-DINO is a project that leverages Principal Component Analysis (PCA) and Dino-ViT.
+PCA-Dino & NCA-Dino is a project that leverages Principal Component Analysis (PCA) and Neighbourhood Component Analysis (NCA) with Dino-ViT.
 
 ## Installation
 
@@ -77,24 +77,30 @@ The extracted Dino-ViT features will be saved in the folder specified by the **-
 
 By customizing these options, you can adjust the feature extraction process to better suit your specific needs.
 
-## PCA-Dino Classifier
-This program allows you to use our classifier on PCA-Dino features. In this research, we use KNN and SVM classifiers. The configuration settings for the classifier can be found in the pca_dino.py code. Below are examples of how to use this script:
+## PCA-Dino and NCA-Dino Classifier
+This program allows you to use our classifier on PCA-Dino and NCA-Dino features. In this research, we use KNN and SVM classifiers. The configuration settings for the classifier can be found in the pca_dino.py code. Below are examples of how to use this script:
 
 ```
-python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True
+python3 pca_dino.py --dataset caltech101 --load_features output/ --act_pca True --n_component 20 --svd_solver randomized --float16 True %for PCA-Dino
 ```
-**If you want to use k-fold cross-validation, you can use the pca_dino_.py file with similar arguments. However, if you have limited resources, you can choose a regular validation with an 80% training and 20% testing split (pca_dino.py), as the results from k-fold cross-validation are often comparable.**
+
+```
+python3 nca_dino.py --dataset caltech101 --load_features output/ --act_nca True --n_component 20 --init_nca pca --float16 True %for NCA-Dino
+```
+
+**If you want to use k-fold cross-validation, you can use the pca_dino_.py or nca_dino_.py file with similar arguments. However, if you have limited resources, you can choose a regular validation with an 80% training and 20% testing split (pca_dino.py or nca_dino.py), as the results from k-fold cross-validation are often comparable.**
 
 ### Instructions
 1. --dataset caltech101: Set your dataset folder within the images/ directory and name the dataset accordingly, for example, caltech101.
 2. --load_features output: Specify the directory where your Dino-ViT extracted features are saved. It will search the folder with the name based on your dataset folder name.
-3. --svd_solver: Set your svd_solver on PCA, default is **auto**
-4. --float16: Use floating point 16 on your results, basic extract features from Dino-ViT is floating point 32. Default set **False** which means still using Float32
-5. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
-6. You can adjust the n_component and svd_solver parameters as needed.
-7. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
+3. --svd_solver: Set your svd_solver on PCA, default is **auto**, it is for PCA-Dino.
+4. --init_nca: Set your init_nca on NCA, default is **auto**, it is for NCA-Dino.
+5. --float16: Use floating point 16 on your results, basic extract features from Dino-ViT is floating point 32. Default set **False** which means still using Float32
+6. Extract Features: Before using this program, ensure that you have extracted features using Dino-ViT and saved them in the correct folder.
+7. You can adjust the n_component and svd_solver parameters as needed.
+8. Results: The classification results will be saved in the classify_pca_dino folder, which is automatically created when you run the code. If you find a CSV file in the folder, it contains the results of your run. **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
    
-By following these instructions, you can effectively utilize the PCA-Dino Classifier for your dataset.
+By following these instructions, you can effectively utilize the PCA-Dino or NCA-Dino Classifier for your dataset.
 
 ## Kernel-PCA and Grid Search
 This repository contains code that supports our research on kernel PCA and grid search. You can utilize this code to replicate our experiments or conduct your own. Detailed instructions are provided within the code. **If you want to use k-fold cross-validation on kernel PCA, you can use kernel_pca_.py**
