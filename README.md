@@ -112,7 +112,7 @@ The code for kernel PCA and grid search can be found in this repository.
 
 ## Results of Research 
 This link can access the result: 
-https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/EpgfR7h6Eb1Bi_bBF-IOwyQBH9pBT80AojePTwrsoaCV3Q?e=OZO96k. 
+https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/ErLq7fCxM-xOoSFs79BJnp8BgTTDVdNl27zHdi3XeWpKNA?e=e1aHkN. 
 If you find CSV file, **<mark> The columns in the CSV file are as follows: the first column is the name of the dataset, the second column is Accuracy, the third column is Top-1 Accuracy, the fourth column is Top-5 Accuracy, the fifth column is the number of components, the sixth column is the size of the entire dataset after reduction, and the last column indicates the timestamp of the run.**
 
 ## Source Dino-ViT:
