@@ -2,7 +2,7 @@
 # PCA-Dino & NCA-Dino
 
 ## Overview
-PCA-Dino & NCA-Dino is a project that leverages Principal Component Analysis (PCA) and Neighbourhood Component Analysis (NCA) with Dino-ViT. The results of our research have been published on this link https://www.mdpi.com/2079-9292/13/23/4694.
+PCA-Dino & NCA-Dino is a project that leverages Principal Component Analysis (PCA) and Neighbourhood Component Analysis (NCA) with Dino-ViT. The results of our research have been published on this [link](https://www.mdpi.com/2079-9292/13/23/4694).
 
 ## Installation
 
@@ -111,8 +111,7 @@ The code for kernel PCA and grid search can be found in this repository.
 * By using this code, you can explore the effectiveness of kernel PCA and grid search in your research. For any questions or further information, please refer to the comments and documentation provided in the code files.
 
 ## Results of Research 
-This link can access the result: 
-https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/ErLq7fCxM-xOoSFs79BJnp8BgTTDVdNl27zHdi3XeWpKNA?e=e1aHkN
+This link can access the result [link](https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/ErLq7fCxM-xOoSFs79BJnp8BgTTDVdNl27zHdi3XeWpKNA?e=e1aHkN)
 
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
