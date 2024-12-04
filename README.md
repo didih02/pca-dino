@@ -2,7 +2,7 @@
 # PCA-Dino & NCA-Dino
 
 ## Overview
-PCA-Dino & NCA-Dino is a project that leverages Principal Component Analysis (PCA) and Neighbourhood Component Analysis (NCA) with Dino-ViT.
+PCA-Dino & NCA-Dino is a project that leverages Principal Component Analysis (PCA) and Neighbourhood Component Analysis (NCA) with Dino-ViT. The results of our research have been published on this link https://www.mdpi.com/2079-9292/13/23/4694.
 
 ## Installation
 
@@ -117,3 +117,18 @@ https://aghedupl-my.sharepoint.com/:f:/g/personal/didihrizki_agh_edu_pl/ErLq7fCx
 ## Source Dino-ViT:
 1. https://github.com/facebookresearch/dino
 2. https://github.com/ShirAmir/dino-vit-features
+
+## Citation
+If you find this repository useful, please cite our work:
+```
+@article{chandranegara2024compact,
+  title={Compact DINO-ViT: Feature Reduction for Visual Transformer},
+  author={Chandranegara, Didih Rizki and Niedziela, Przemys{\l}aw and Cyganek, Bogus{\l}aw},
+  journal={Electronics},
+  volume={13},
+  number={23},
+  pages={4694},
+  year={2024},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+```
