@@ -12,7 +12,7 @@ Before you use our code, please install the required libraries if you haven't al
 pip3 install scikit-learn torch torchvision numpy
 ```
 
-## Data Folder (if your dataset doesn't have 'train' and 'val' folders separate):
+## Data Folder (if your dataset doesn't have 'train' and 'test' folders separate):
 Ensure that your downloaded dataset follows the specified structure. For instance, when using the Caltech101 dataset, it should be saved in the data/ folder. Please keep the original structure intact when extracting the dataset from the zip folder or any other archive. Do not move or change anything inside, as my program will automatically detect the correct configuration. Example:
 
 ```
