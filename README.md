@@ -29,7 +29,7 @@ data/
 
 ## Split dataset
 
-This script is used to split your dataset into training and validation sets. Below is an example of how to use this script using split_dataset.py:
+This script is used to split your dataset into training and testing sets. Below is an example of how to use this script using split_dataset.py:
 
 ```
 python3 split_dataset.py --data_dir data/caltech101 --output_dir images/caltech101 --train_ratio 0.8 --type_images png
@@ -52,7 +52,7 @@ Use the command shown above to run the script. Replace the paths and ratio as ne
 2. The split datasets will be saved in images/caltech101.
 3. Ensure that the directory structure is correctly set up before running the script.
 4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
-5. By following these steps, you can easily split your dataset into training and validation sets using the split_dataset.py script.
+5. By following these steps, you can easily split your dataset into training and testing sets using the split_dataset.py script.
 6. Using this script, your dataset will be preprocessed by our program.
 
 ## Extract Features
