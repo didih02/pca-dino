@@ -44,14 +44,14 @@ Instructions:
 Use the command shown above to run the script. Replace the paths and ratio as needed:
 * --data_dir: The directory where your dataset is stored.
 * --output_dir: The directory where you want the split dataset to be saved.
-* --train_ratio: The ratio of the dataset to be used for training. In the example above, 0.8 means 80% for training and 20% for validation.
+* --train_ratio: The ratio of the dataset to be used for training. In the example above, 0.8 means 80% for training and 20% for testing.
 * --types_images: Set your type of images, example: png, jpeg, jpg.
 
 **Notes:**
 1. In this example, The dataset is located in data/caltech101.
 2. The split datasets will be saved in images/caltech101.
 3. Ensure that the directory structure is correctly set up before running the script.
-4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and validation.
+4. You can adjust the --train_ratio parameter to change the proportion of the dataset used for training and testing.
 5. By following these steps, you can easily split your dataset into training and testing sets using the split_dataset.py script.
 6. Using this script, your dataset will be preprocessed by our program.
 
