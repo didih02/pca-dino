@@ -1,4 +1,4 @@
-#this program for divide data train and val
+#this program for divide data train and test
 import argparse
 import os
 import shutil
@@ -29,20 +29,20 @@ def split(data_dir, train_ratio, output_dir, type):
     # Load the dataset which save on data/ folder
     dataset = datasets.ImageFolder(root=data_dir, transform=transform)
 
-    # Define the split ratio for train and val
+    # Define the split ratio for train and test
     train_ratio = 0.8
-    # val_ratio = 0.2
+    # test_ratio = 0.2
 
-    # Calculate the number of samples for train and val
+    # Calculate the number of samples for train and test
     num_train = int(len(dataset) * train_ratio)
-    num_val = len(dataset) - num_train
+    num_test = len(dataset) - num_train
 
-    # Split the dataset into train and val sets
-    train_set, val_set = random_split(dataset, [num_train, num_val])
+    # Split the dataset into train and test sets
+    train_set, test_set = random_split(dataset, [num_train, num_test])
 
-    # Save train and val images to folders
+    # Save train and test images to folders
     save_images(train_set, 'train', output_dir, type)
-    save_images(val_set, 'val', output_dir, type)
+    save_images(test_set, 'test', output_dir, type)
 
     print(f"Images have been saved to the directory.")
 
